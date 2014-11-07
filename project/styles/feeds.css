@@ -1,0 +1,47 @@
+.feeds {
+    margin-left: 10px;
+}
+.feeds .navbar-form {
+    width: 650px;
+    border: 1px solid rgb(12, 95, 32);;
+    padding: 10px;
+    border-radius: 10px;
+}
+.feeds .top-dist {
+    margin-top: 15px;
+}
+
+.feeds .form-group > div {
+    display: inline-block;
+}
+.feeds .form-group label {
+    min-width: 130px;
+    color: rgb(12, 95, 32);
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.feeds .form-group button {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.feeds .widget .text {
+    font-size: 13px;
+    color: gray;
+    font-style: italic;
+}
+.feeds .widget .date {
+    text-align: right;
+    color: rgb(12, 95, 32);
+    font-style: italic;
+}
+.feeds .widget h4 {
+    color: rgb(12, 95, 32);
+}
+.feeds [widget-drtv] {
+    width: 650px;
+    overflow-y: auto;
+    max-height: 450px;
+}

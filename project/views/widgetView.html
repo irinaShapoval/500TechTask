@@ -1,0 +1,8 @@
+<div class="widget">
+    <div ng-repeat="item in content" class="item top-dist">
+        <h4>{{item.title}}</h4>
+        <div class="text" ng-bind-html="renderHtml(item.content)"></div>
+
+        <div class="date">{{item.date}}</div>
+    </div>
+</div>

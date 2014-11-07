@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>500Tech</title>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+    <script src="app.js"></script>
+    <script src="services/dataSourceService.js"></script>
+    <script src="controllers/widgetCtrl.js"></script>
+    <script src="directives/widgetDrtv.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/feeds.css"/>
+
+</head>
+<body ng-app="feedsApp">
+    <div ng-controller="widgetCtrl" class="feeds">
+        <div class="navbar-form">
+            <div class="form-group">
+                <div>
+                    <div>
+                        <label>Enter your URL:</label>
+                        <input type="url" ng-model="d.url" type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <div class="top-dist">
+                        <label>Widgets to show:</label>
+                        <input ng-model="d.widgetsNum" type="number" class="form-control" min="5" max="20">
+                    </div>
+                    <div class="top-dist">
+                        <div class="checkbox">
+                            <label><input ng-model="d.showDate" type="checkbox">Show/Do not show date</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-default btn-success" ng-click="getFeeds()" ng-disabled="!d.url">Submit</button>
+            </div>
+        </div>
+        <div widget-drtv content="d.widgetContent" ng-if="d.widgetContent"></div>
+    </div>
+</body>
+
